@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app
+spec:
+  selector:
+    matchLabels:
+      app: flask-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask-app
+    spec:
+      containers:
+      - name: flask-app
+        image: zilcherry100/flask-app-gitops:ecf968b2a9bc8dea40e714e9728af121ab437e5677a6f628103c185caf494fb0
+        ports:
+        - containerPort: 5000
