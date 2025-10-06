@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: zilcherry100/flask-app-gitops:ecf968b2a9bc8dea40e714e9728af121ab437e5677a6f628103c185caf494fb0
+        image: zilcherry100/flask-app-gitops:latest
         ports:
         - containerPort: 5000
